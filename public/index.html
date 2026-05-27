@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipit AI Clone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Foto AI Berbicara</h1>
+
+<div class="card">
+
+<label>Upload Foto</label>
+<input type="file" id="photo">
+
+<label>Upload Audio</label>
+<input type="file" id="audio">
+
+<label>Prompt Gerakan</label>
+
+<textarea
+id="prompt"
+placeholder="Contoh: tersenyum sambil berbicara dan sedikit menggerakkan kepala">
+</textarea>
+
+<label>Rasio Video</label>
+
+<select id="ratio">
+<option value="9:16">9:16 Vertical</option>
+<option value="16:9">16:9 Landscape</option>
+<option value="1:1">1:1 Square</option>
+</select>
+
+<button onclick="generateVideo()">
+Generate Video
+</button>
+
+</div>
+
+<video
+id="video"
+controls
+style="display:none">
+</video>
+
+<a id="downloadBtn" download>
+Download Video
+</a>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
